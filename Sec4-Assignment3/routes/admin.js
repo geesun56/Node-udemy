@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 
+const products = [];
 
 router.get('/order', (req,res,next) => {
     console.log('order')
@@ -9,8 +10,11 @@ router.get('/order', (req,res,next) => {
 })
 
 router.post('/order', (req,res,next) => {
-    console.log(req.body);
+    products.push({title: req.body.title});
     res.redirect('/')
 })
 
-module.exports = router;
+module.exports = {
+    routes: router,
+    products : products
+}
