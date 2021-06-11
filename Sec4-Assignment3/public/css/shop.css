@@ -1,0 +1,11 @@
+.shop-nav-list{
+    display: flex;
+}
+.shop-nav-item{
+    list-style: none;
+    padding-right: 60px;
+    font-size: 27px;
+}
+.main-content{
+    padding: 20px
+}
